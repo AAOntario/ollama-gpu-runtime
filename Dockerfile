@@ -1,5 +1,5 @@
-# Start with RunPod's latest CUDA + PyTorch image (Torch 2.7.2, CUDA 12.8)
-FROM runpod/pytorch:2.7.2-cuda12.8.0-runtime
+# Start with NVIDIA CUDA 12.2 Runtime on Ubuntu 22.04
+FROM nvidia/cuda:12.2.0-runtime-ubuntu22.04
 
 # Install utilities
 RUN apt-get update && apt-get install -y curl
@@ -17,3 +17,4 @@ ENV OLLAMA_MODELS=/workspace/models
 
 # Set your wrapped start script as the container's entrypoint
 ENTRYPOINT ["/start.sh"]
+
