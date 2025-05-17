@@ -21,9 +21,9 @@ case "${SERVICE_MODE}" in
     ;;
 
   webui)
-    echo "Starting Pre-Baked Open WebUI..."
-    cd /opt/open-webui
-    python3 app.py
+echo "Starting Pre-Baked Open WebUI..."
+cd /opt/open-webui/backend
+python3 app.py
     echo "Open WebUI started successfully"
     ;;
 
