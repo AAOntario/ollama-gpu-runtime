@@ -1,0 +1,7 @@
+version: "0.1"
+services:
+  - name: openwebui-ollama
+    image: yourusername/yourimage:tag
+    ports:
+      - 45889  # or whatever port your service runs on
+    gpu: true
