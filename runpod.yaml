@@ -1,7 +1,11 @@
 version: "0.1"
 services:
-  - name: openwebui-ollama
-    image: yourusername/yourimage:tag
+  - name: sanctuary-runtime
+    image: aaontario/ollama-gpu-runtime:latest
     ports:
-      - 45889  # or whatever port your service runs on
+      - 11434
+      - 3000
+      - 8888
     gpu: true
+    volumes:
+      - /workspace  # NOT /workspace/models
